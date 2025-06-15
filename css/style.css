@@ -1,0 +1,132 @@
+/* 전반적인 스타일링 */
+html {
+    font-size: 100%; /* HTML 기본 글꼴 크기 100% 설정 */
+}
+body {
+	color: #000000; /* 본문 텍스트 색상 블랙(#000000) 설정 */
+	font-family: sans-serif; /* 본문 기본 글꼴 sans-serif 설정 */
+}
+
+/* 공통 스타일 */
+section {
+    height: 100vh; /* 높이 */
+    scroll-snap-align: start; /* 스크롤 스냅 영역-시작점 */
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(212, 243, 255));
+}
+
+.title {
+    font-size: 7rem; /* 글꼴 크기 */
+    margin-bottom: 2rem; /* 아래쪽 바깥 여백 */
+    text-align: center; /* 가운데 정렬 */
+}
+
+.kr, p {
+    font-family: "Nanum Brush Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kr {
+    font-weight: bold;
+}
+
+.en {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 스크롤 스냅 영역 */
+.a {
+    overflow: auto; /* 내용 초과할 경우 스크롤 자동 표시 */
+    scroll-snap-type: y mandatory; /* 스크롤 대상 수직 방향 */
+    height: 100vh; /* 브라우저 화면 높이의 100% 설정 */
+}
+
+/* cjh 영역 */
+.cjh {
+   /* background-image: url(../이미지/하늘하트.jpg); 배경이미지 */
+    text-align: center; /* 가운데 정렬 */
+    padding-top: 10vh; /* 상단 안쪽 여백 */
+}
+
+.cjh p {
+    line-height: 5; /* 글꼴 크기 1.7배 설정 */
+    font-size: 1.5rem; /* 기본 글자 크기 1.125배 설정 */
+}
+
+.cjh ul {
+    list-style: none; /* 불릿 제거 */
+    padding: 0;
+    margin: 0;
+    display: flex; /* 가로 정렬 */
+    gap: 1rem; /* 항목 간 여백 */
+    justify-content: center; /* 중앙 정렬 */
+}
+
+.btn a {
+    color: #fff; /* 글자색상 */
+    padding: 10px 20px; /* 내부 여백 */
+    background: #92a8d1; /* 배경 색상 */
+    box-shadow: 0 0 0 5px #92a8d1; /* 그림자 */
+    border: 2px dashed #fff; /* 점선 테두리 */
+    border-radius: 5px; /* 테두리 모서리 */
+    text-decoration: none; /* 밑줄 제거 */
+    display: inline-block; /* 인라인 요소 */
+}
+
+.btn a:hover {
+    color: #fff; /* 글자색상 */
+    background: #f7cac9; /* 배경색상 */
+    box-shadow: 0 0 0 5px #f7cac9; /* 그림자 */
+    border: 2px dashed #fff; /* 점선 테두리 */
+}
+
+/* favorite 영역 */
+.favorite {
+    background-image: linear-gradient( rgb(212, 243, 255),  rgb(175, 232, 255));
+}
+
+.b {
+    max-width: 900px; /* 최대 900px까지만 늘어나도록 제한 */
+    width: 100%; /* 부모 요소 너비 */
+    margin: 0 auto; /* 좌우 여백 자동 */
+    padding: 0 1rem; /* 좌우 여백 */
+}
+
+.favorite-list {
+    margin: 0 auto; /* 좌우 여백을 자동-가로 방향 중앙 정렬 */
+    width: 80%; /* 부모 요소 너비의 80% */
+    border-collapse: collapse; /* 테두리 하나로 겹쳐 표현 */
+}
+
+.favorite-list tr {
+    border-bottom: 1px solid rgb(255, 255, 255); /* 실선 */
+}
+
+.favorite-list th, td {
+    padding: 1rem 0; /* 상하 여백 1rem, 좌우 여백 0 */
+    line-height: 5; /* 줄 간격 */
+    text-align: center; /* 가운데 정렬 */
+}
+
+/* MOBILE SIZE */
+@media (max-width: 700px) {
+    .title {
+        font-size: 3rem;
+    }
+    .cjh ul {
+        display: inline-block;
+    }
+    .btn {
+        font-size: 30px;
+        padding: 25px 25px;
+
+    }
+    .favorite-list th, td {
+        font-size: 50%;
+        padding: 1rem 0; /* 상하 여백 1rem, 좌우 여백 0 */
+        line-height: 10; /* 줄 간격 */
+    }
+
+}
